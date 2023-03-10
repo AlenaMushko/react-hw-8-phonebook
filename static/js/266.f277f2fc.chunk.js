@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkphonebook=self.webpackChunkphonebook||[]).push([[266],{1266:function(e,n,o){o.r(n),o.d(n,{default:function(){return u}});var r=o(184);function u(){return(0,r.jsx)("div",{children:(0,r.jsxs)("h1",{children:["Task manager welcome page"," "]})})}}}]);
+//# sourceMappingURL=266.f277f2fc.chunk.js.map
