@@ -1,10 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
-import './index.css';
+import { Provider } from 'react-redux';
+import { persistor, store } from 'redux/store';
+import { } from 'redux-persist/integration/react';
+import { BrowserRouter } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
+import './styles/index.css';
+import './styles/theme.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <BrowserRouter basename="/react-hw-8-phonebook">
+        <PersistGate loading={null} persistor={persistor}>
+        <App />
+        </PersistGate>
+        </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
