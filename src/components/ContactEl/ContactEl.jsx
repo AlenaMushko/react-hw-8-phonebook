@@ -15,32 +15,32 @@ export const ContactEl = ({ contact }) => {
       gap={8}
       alignItems="center"
       p={4}
-      bg="green.400"
-      color="whitesmoke"
+      // bg="teal.300"
+      bg='blue.300'
+      color="darkblue"
       borderRadius={18}
       boxShadow="xl"
       _hover={{ boxShadow: 'dark-lg' }}
     >
       <Text>
-        <Icon as={CgSmileMouthOpen} w={8} h={8} color="pink.500" mr={3} />
+        <Icon as={CgSmileMouthOpen} w={8} h={8} color="yellow.200" mr={3} />
         {name}:
       </Text>
       <Text>
-        <Icon as={BsPhoneVibrate} w={8} h={8} color="pink.500" mr={3} />
+        <Icon as={BsPhoneVibrate} w={8} h={8} color="yellow.200" mr={3} />
         {number}
       </Text>
       <Spacer />
       <Button
-        color="white"
         fontSize={18}
         type="submit"
-        bg="green.300"
-        _hover={{ bg: 'pink.100', color: 'green.800' }}
+        bg="yellow.200"
+        _hover={{ bg: "blue.500", color: 'yellow.200' }}
         boxShadow="dark-lg"
         rounded="md"
         onClick={() => dispatch(deleteContact(id))}
       >
-        <DeleteIcon color="green" w={6} h={6} mr={3} />
+        <DeleteIcon color="blue.500" w={6} h={6} mr={3}  _hover={{ color: 'yellow.200' }}/>
         Delete
       </Button>
     </Flex>

@@ -8,13 +8,13 @@ export const UserMenu = () => {
   const { user } = useAuth();
   return (
     <ButtonGroup gap={8}>
-      <Text as="i" color={'green.100'}>
+      <Text as="i" color={'yellow.100'}>
         Welcome, {user.name}
       </Text>
       <Button
         fontSize={18}
-        bg="pink.200"
-        _hover={{ bg: 'green.100' }}
+        bg="teal.200"
+        _hover={{ bg: 'yellow.100' }}
         onClick={() => dispatch(logOut())}
       >
         Logout

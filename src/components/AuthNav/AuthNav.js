@@ -7,7 +7,7 @@ export const AuthNav = () => {
       <Button
         fontSize={24}
         bg="transparent"
-        _hover={{ bg: '#ebedf0' }}
+        _hover={{ bg: 'teal.200'}}
         as={NavLink}
         to="/register"
         style={({ isActive }) => ({
@@ -20,7 +20,7 @@ export const AuthNav = () => {
       <Button
         fontSize={24}
         bg="transparent"
-        _hover={{ bg: '#ebedf0' }}
+        _hover={{ bg: 'teal.200' }}
         as={NavLink}
         to="/login"
         style={({ isActive }) => ({
