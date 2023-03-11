@@ -1,9 +1,10 @@
 import React from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
 import { Provider } from 'react-redux';
 import { persistor, store } from 'redux/store';
-import { } from 'redux-persist/integration/react';
+import {} from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import './styles/index.css';
@@ -14,9 +15,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <BrowserRouter basename="/react-hw-8-phonebook">
         <PersistGate loading={null} persistor={persistor}>
-        <App />
+          <ChakraProvider>
+            <App />
+          </ChakraProvider>
         </PersistGate>
-        </BrowserRouter>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );

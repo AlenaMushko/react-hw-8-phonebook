@@ -1,10 +1,10 @@
-import { RegisterForm } from "components/RegisterForm";
-
+import { RegisterForm } from 'components/RegisterForm';
+import { Container } from '@chakra-ui/react';
 
 export default function Register() {
   return (
-    <div>
+    <Container bg="#FAF5FF">
       <RegisterForm />
-    </div>
+    </Container>
   );
 }

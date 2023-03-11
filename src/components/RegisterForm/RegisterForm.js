@@ -1,6 +1,17 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  FormHelperText,
+  Button,
+  Text,
+  Container,
+} from '@chakra-ui/react';
+import { AtSignIcon, LockIcon, Icon } from '@chakra-ui/icons';
+import { BsFillEmojiWinkFill } from 'react-icons/bs';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -23,41 +34,84 @@ export const RegisterForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(
-      register({ name, email, password })
-    );
+    dispatch(register({ name, email, password }));
     setName('');
     setEmail('');
     setPassword('');
   };
   return (
-    <>
-      <h2>Registration</h2>
-      <form onSubmit={handleSubmit} autoComplete="off">
-        <label>
-          Username
-          <input type="text" name="name" value={name} onChange={handleChange} />
-        </label>
-        <label>
-          Email
-          <input
+    <Container maxW="2xl" centerContent>
+      <Text fontSize="32px" as="i" color="pink.600">
+        Registration
+      </Text>
+      <FormControl
+        as="form"
+        display="flex"
+        flexDirection="column"
+        gap={8}
+        p={4}
+        onSubmit={handleSubmit}
+        autoComplete="off"
+      >
+        <FormLabel>
+          <Icon as={BsFillEmojiWinkFill} w={6} h={6} color="yellow.400" />
+          Name
+          <Input
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            boxShadow="xl"
+            p="6"
+            rounded="md"
+          />
+          <FormHelperText fontSize={14} color="green.500" mt={1}>
+            Name may contain only letters
+          </FormHelperText>
+        </FormLabel>
+        <FormLabel>
+          <AtSignIcon color="yellow.400" w={6} h={6} mb={1} /> Email address
+          <Input
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
+            boxShadow="xl"
+            p="6"
+            rounded="md"
           />
-        </label>
-        <label>
-          Password
-          <input
+          <FormHelperText fontSize={14} color="green.500" mt={1}>
+            Email must contain @
+          </FormHelperText>
+        </FormLabel>
+        <FormLabel>
+          <LockIcon color="yellow.400" w={6} h={6} mb={1} /> Password
+          <Input
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
+            boxShadow="xl"
+            p="6"
+            rounded="md"
           />
-        </label>
-        <button type="submit">Register</button>
-      </form>
-    </>
+          <FormHelperText fontSize={14} color="green.500" mt={1}>
+            Password must be at least 8 signs
+          </FormHelperText>
+        </FormLabel>
+        <Button
+          type="submit"
+          w={40}
+          m={12}
+          bg="green.300"
+          _hover={{ bg: 'pink.300' }}
+          boxShadow="dark-lg"
+          size="lg"
+          rounded="md"
+        >
+          Register
+        </Button>
+      </FormControl>
+    </Container>
   );
 };

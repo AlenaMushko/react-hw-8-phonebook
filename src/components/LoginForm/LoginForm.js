@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  FormHelperText,
+  Button,
+} from '@chakra-ui/react';
+import { AtSignIcon, UnlockIcon } from '@chakra-ui/icons';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -21,9 +29,6 @@ export const LoginForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // dispatch(logIn({ email, password }));
-    // setEmail('');
-    // setPassword('');
     const form = e.currentTarget;
     dispatch(
       logIn({
@@ -35,30 +40,58 @@ export const LoginForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} autoComplete="off">
-        <label>
-          Email
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-        </label>
+    <FormControl
+      as="form"
+      display="flex"
+      flexDirection="column"
+      gap={8}
+      p={4}
+      onSubmit={handleSubmit}
+      autoComplete="off"
+    >
+      <FormLabel>
+        <AtSignIcon color="green.500" mb={1} /> Email address
+        <Input
+          type="email"
+          name="email"
+          value={email}
+          onChange={handleChange}
+          boxShadow="xl"
+          p="6"
+          rounded="md"
+        />
+        <FormHelperText fontSize={14} color="green.500" mt={1}>
+          Email must contain @
+        </FormHelperText>
+      </FormLabel>
 
-        <label>
-          Password
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </label>
-
-        <button type="submit">Log In</button>
-      </form>
-    </div>
+      <FormLabel>
+        <UnlockIcon color="green.500" mb={1} /> Password
+        <Input
+          type="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+          boxShadow="xl"
+          p="6"
+          rounded="md"
+        />
+        <FormHelperText fontSize={14} color="green.500" mt={1}>
+          Password must be at least 8 signs
+        </FormHelperText>
+      </FormLabel>
+      <Button
+        type="submit"
+        w={40}
+        m={12}
+        bg="green.300"
+        _hover={{ bg: 'pink.300' }}
+        boxShadow="dark-lg"
+        size="lg"
+        rounded="md"
+      >
+        Log In
+      </Button>
+    </FormControl>
   );
-}
+};

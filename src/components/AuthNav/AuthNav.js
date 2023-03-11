@@ -1,20 +1,34 @@
 import { NavLink } from 'react-router-dom';
-import { Wraper } from './AuthNav.styled';
-
+import { Button, ButtonGroup } from '@chakra-ui/react';
 
 export const AuthNav = () => {
   return (
-    <Wraper>
-      <NavLink to='/register' style={({ isActive }) => ({
-          color: isActive ? 'tomato' : 'darkblue',
-        })}>
+    <ButtonGroup gap="8">
+      <Button
+        fontSize={24}
+        bg="transparent"
+        _hover={{ bg: '#ebedf0' }}
+        as={NavLink}
+        to="/register"
+        style={({ isActive }) => ({
+          color: isActive ? 'yellow' : 'darkblue',
+        })}
+      >
         Register
-      </NavLink>
-      <NavLink to='/login' style={({ isActive }) => ({
-          color: isActive ? 'tomato' : 'darkblue',
-        })}>
+      </Button>
+
+      <Button
+        fontSize={24}
+        bg="transparent"
+        _hover={{ bg: '#ebedf0' }}
+        as={NavLink}
+        to="/login"
+        style={({ isActive }) => ({
+          color: isActive ? 'yellow' : 'darkblue',
+        })}
+      >
         Log In
-      </NavLink>
-    </Wraper>
+      </Button>
+    </ButtonGroup>
   );
 };

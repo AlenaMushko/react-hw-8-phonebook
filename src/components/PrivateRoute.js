@@ -8,17 +8,19 @@ import { useAuth } from 'hooks/useAuth';
  */
 // 1) Повторює API Route
 // 2) Рендерить Route
-export default function PrivateRoute({component: Component,  redirectTo = '/'}) {
-  const {isLoggedIn, isRefreshing} = useAuth();
+export default function PrivateRoute({
+  component: Component,
+  redirectTo = '/',
+}) {
+  const { isLoggedIn, isRefreshing } = useAuth();
   const shouldRedirect = !isRefreshing && !isLoggedIn;
-  return shouldRedirect ? <Navigate to={redirectTo}/> : <Component />;
-};
+  return shouldRedirect ? <Navigate to={redirectTo} /> : <Component />;
+}
 
 PrivateRoute.protoType = {
   children: propTypes.element,
   redirectTo: propTypes.string,
 };
-
 
 // export default function PrivateRoute ({ component: Component, redirectTo = '/' }) {
 //   const { isLoggedIn, isRefreshing } = useAuth();

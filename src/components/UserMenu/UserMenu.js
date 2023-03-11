@@ -1,17 +1,24 @@
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/operations';
 import { useAuth } from '../../hooks/useAuth';
-import { Wraper } from './UserMenu.styled';
+import { Button, ButtonGroup, Text } from '@chakra-ui/react';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
   return (
-    <Wraper >
-      <p >Welcome, {user.name}</p>
-      <button type="button" onClick={() => dispatch(logOut())}>
+    <ButtonGroup gap={8}>
+      <Text as="i" color={'green.100'}>
+        Welcome, {user.name}
+      </Text>
+      <Button
+        fontSize={18}
+        bg="pink.200"
+        _hover={{ bg: 'green.100' }}
+        onClick={() => dispatch(logOut())}
+      >
         Logout
-      </button>
-    </Wraper>
+      </Button>
+    </ButtonGroup>
   );
 };

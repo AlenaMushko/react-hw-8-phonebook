@@ -1,9 +1,10 @@
-import { LoginForm } from "components/LoginForm";
+import { LoginForm } from 'components/LoginForm';
+import { Container } from '@chakra-ui/react';
 
 export default function Login() {
   return (
-    <div>
+    <Container bg="#FAF5FF">
       <LoginForm />
-    </div>
+    </Container>
   );
 }
