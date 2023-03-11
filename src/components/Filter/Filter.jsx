@@ -22,7 +22,7 @@ export const FilterContacts = () => {
   };
 
   return (
-    <Flex display="flex" bg="pink.400" p="4" borderTopRadius={20}>
+    <Flex display="flex" bg="blue.600" p="4" borderTopRadius={20}>
       <Text fontSize="24px" color="whitesmoke">
         Find contacts by name
       </Text>

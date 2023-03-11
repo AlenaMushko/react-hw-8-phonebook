@@ -55,6 +55,7 @@ export const ContactForm = () => {
     <Container maxW="2xl" centerContent>
       <FormControl
         as="form"
+        color="blue.500"
         bg="#FAF5FF"
         border={30}
         onSubmit={handleSubmit}
@@ -76,7 +77,7 @@ export const ContactForm = () => {
               p="6"
               rounded="md"
             />
-            <FormHelperText fontSize={14} color="green.500" mt={1}>
+            <FormHelperText fontSize={14} color="yellow.500" mt={1}>
               Name must be longer than 2 characters
             </FormHelperText>
           </FormLabel>
@@ -96,7 +97,7 @@ export const ContactForm = () => {
               p="6"
               rounded="md"
             />
-            <FormHelperText fontSize={14} color="green.500" mt={1}>
+            <FormHelperText fontSize={14} color="yellow.500" mt={1}>
               Number must be only numbers
             </FormHelperText>
           </FormLabel>
@@ -106,8 +107,8 @@ export const ContactForm = () => {
             <Button
               type="submit"
               w={300}
-              bg="green.300"
-              _hover={{ bg: 'pink.300' }}
+              bg= 'yellow.100'
+              _hover={{ bg: "teal.200"  }}
               boxShadow="dark-lg"
               size="lg"
               rounded="md"

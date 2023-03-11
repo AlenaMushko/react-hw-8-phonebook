@@ -50,7 +50,7 @@ export const LoginForm = () => {
       autoComplete="off"
     >
       <FormLabel>
-        <AtSignIcon color="green.500" mb={1} /> Email address
+        <AtSignIcon color="blue.500" mb={1} /> Email address
         <Input
           type="email"
           name="email"
@@ -60,13 +60,13 @@ export const LoginForm = () => {
           p="6"
           rounded="md"
         />
-        <FormHelperText fontSize={14} color="green.500" mt={1}>
+        <FormHelperText fontSize={14} color="blue.500" mt={1}>
           Email must contain @
         </FormHelperText>
       </FormLabel>
 
       <FormLabel>
-        <UnlockIcon color="green.500" mb={1} /> Password
+        <UnlockIcon color="blue.500" mb={1} /> Password
         <Input
           type="password"
           name="password"
@@ -76,7 +76,7 @@ export const LoginForm = () => {
           p="6"
           rounded="md"
         />
-        <FormHelperText fontSize={14} color="green.500" mt={1}>
+        <FormHelperText fontSize={14} color="blue.500" mt={1}>
           Password must be at least 8 signs
         </FormHelperText>
       </FormLabel>
@@ -84,8 +84,8 @@ export const LoginForm = () => {
         type="submit"
         w={40}
         m={12}
-        bg="green.300"
-        _hover={{ bg: 'pink.300' }}
+        bg="blue.100"
+        _hover={{ bg: 'yellow.100' }}
         boxShadow="dark-lg"
         size="lg"
         rounded="md"

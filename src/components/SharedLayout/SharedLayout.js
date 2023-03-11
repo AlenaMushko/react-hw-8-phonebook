@@ -14,7 +14,7 @@ const SharedLayout = () => {
       <Box
         as="header"
         p={3}
-        bgGradient="linear(to-r, green.200, pink.500)"
+        bgGradient="linear(to-r, yellow.300, blue.500)"
         boxShadow="xl"
         w="100%"
       >

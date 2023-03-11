@@ -54,7 +54,7 @@ export const RegisterForm = () => {
         autoComplete="off"
       >
         <FormLabel>
-          <Icon as={BsFillEmojiWinkFill} w={6} h={6} color="yellow.400" />
+          <Icon as={BsFillEmojiWinkFill} w={6} h={6} color="blue.500" />
           Name
           <Input
             type="text"
@@ -65,12 +65,12 @@ export const RegisterForm = () => {
             p="6"
             rounded="md"
           />
-          <FormHelperText fontSize={14} color="green.500" mt={1}>
+          <FormHelperText fontSize={14} color="blue.500" mt={1}>
             Name may contain only letters
           </FormHelperText>
         </FormLabel>
         <FormLabel>
-          <AtSignIcon color="yellow.400" w={6} h={6} mb={1} /> Email address
+          <AtSignIcon color="blue.500" w={6} h={6} mb={1} /> Email address
           <Input
             type="email"
             name="email"
@@ -80,12 +80,12 @@ export const RegisterForm = () => {
             p="6"
             rounded="md"
           />
-          <FormHelperText fontSize={14} color="green.500" mt={1}>
+          <FormHelperText fontSize={14} color="blue.500" mt={1}>
             Email must contain @
           </FormHelperText>
         </FormLabel>
         <FormLabel>
-          <LockIcon color="yellow.400" w={6} h={6} mb={1} /> Password
+          <LockIcon color="blue.500" w={6} h={6} mb={1} /> Password
           <Input
             type="password"
             name="password"
@@ -95,7 +95,7 @@ export const RegisterForm = () => {
             p="6"
             rounded="md"
           />
-          <FormHelperText fontSize={14} color="green.500" mt={1}>
+          <FormHelperText fontSize={14} color="blue.500" mt={1}>
             Password must be at least 8 signs
           </FormHelperText>
         </FormLabel>
@@ -103,8 +103,8 @@ export const RegisterForm = () => {
           type="submit"
           w={40}
           m={12}
-          bg="green.300"
-          _hover={{ bg: 'pink.300' }}
+          bg="blue.100"
+          _hover={{ bg: 'yellow.100' }}
           boxShadow="dark-lg"
           size="lg"
           rounded="md"

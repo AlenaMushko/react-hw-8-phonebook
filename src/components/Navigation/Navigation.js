@@ -13,7 +13,7 @@ export const Navigation = () => {
         as={NavLink}
         to="/"
         style={({ isActive }) => ({
-          color: isActive ? 'yellow' : 'darkblue',
+          color: isActive ? 'darkblue': 'yellow' ,
         })}
       >
         Home
@@ -26,7 +26,7 @@ export const Navigation = () => {
           as={NavLink}
           to="/contacts"
           style={({ isActive }) => ({
-            color: isActive ? 'yellow' : 'darkblue',
+            color: isActive ? 'darkblue': 'yellow',
           })}
         >
           Contacts
